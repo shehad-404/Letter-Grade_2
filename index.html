@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Letter Grade</title>
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <!-- fontawesome css  -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+  <body>
+   <div class="container">
+    <div class="row">
+        <h3>Letter Grade using individual Subject Marks</h3>
+        <div class=" offset-4 col-md-4 offset-4">
+            <script>
+                var bangla = prompt("Enter Bangla marks: ");
+                bangla = parseInt(bangla);
+        
+                var english = prompt("Enter english marks: ");
+                english = parseInt(english);
+        
+                var math = prompt("Enter math marks: ");
+                math = parseInt(math);
+        
+                var physics = prompt("Enter physics marks: ");
+                physics = parseInt(physics);
+        
+                var chemistry = prompt("Enter chemistry marks: ");
+                chemistry = parseInt(chemistry);
+        
+                var biology = prompt("Enter biology marks: ");
+                biology = parseInt(biology);
+                // var bangla = 87;
+                // var english = 98;
+                // var math = 99;
+                // var physics = 96;
+                // var chemistry = 99;
+                // var biology = 95;
+        
+                var total = bangla+english+math+physics+chemistry+biology;
+        
+                var avg = (bangla+english+math+physics+chemistry+biology)/6;
+                avg = parseInt(avg);
+        
+                document.write("Total marks: "+total);
+                document.write("<br>Average marks is: "+avg);
+        
+                if(bangla<33 || english<33 || math<33 || physics<33 || chemistry<33 || biology<33 ){
+                    document.write("<br>You have Failed!");
+                }
+                else if(avg>=80 && avg<=100){
+                    document.write("<br>You Got A+");
+                }
+                else if(avg>=70 && avg<80){
+                    document.write("<br>You Got A");
+                }
+                else if(avg>=60 && avg<70){
+                    document.write("<br>You Got A-");
+                }
+                else if(avg>=50 && avg<60){
+                    document.write("<br>You Got B");
+                }
+                else if(avg>=40 && avg<50){
+                    document.write("<br>You Got C");
+                }
+                else if(avg>=33 && avg<40){
+                    document.write("<br>You Got D");
+                }
+               else{
+                document.write("<br>You have failed!");
+               }
+            </script>
+        </div>
+    </div>
+   </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
